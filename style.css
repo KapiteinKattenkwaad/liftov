@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  font-family: "Montserrat";
+}
+
+section {
+  margin-bottom: 5em;
+}
+
+/*margins on sections */
+.image-right,
+.many-images {
+  margin: 3em 2em;
+}
+
+@media screen and (min-width: 786px) {
+  .image-right,
+.many-images,
+section.contact {
+    margin: 5em 7em;
+  }
+}
+/*nav */
+.nav#home,
+.navbar {
+  background-color: lightgrey !important;
+}
+
+/* header */
+.hero {
+  height: 100vh;
+  width: 100vw;
+  background-color: lightgrey;
+}
+.hero .hero-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero h1 {
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+/* section image right */
+.image-right {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.image-right p {
+  padding: 2em;
+}
+.image-right button {
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 25px;
+  padding: 1em 2.5em;
+  margin-bottom: 2em;
+}
+.image-right .image-big {
+  width: 100%;
+  height: auto;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 768px) {
+  .image-right .center {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .image-right button {
+    margin-left: 2em;
+  }
+}
+/* many images */
+.many-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0.2em;
+}
+.many-images .image-small {
+  width: 100%;
+  height: auto;
+  background-size: cover;
+}
+
+@media screen and (min-width: 768px) {
+  .many-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.2em;
+  }
+}
+/*full width img  */
+.full-width img {
+  height: 100%;
+  width: 100vw;
+}
+
+@media only screen and (max-width: 768px) {
+  .full-width img {
+    height: 100%;
+    width: 100vw;
+  }
+}
+/* contact */
+.contact {
+  margin: 2em;
+}
+.contact h2 {
+  text-transform: uppercase;
+  padding-bottom: 1em;
+  font-weight: bold;
+}
+.contact input,
+.contact textarea {
+  border-radius: 25px;
+  margin-bottom: 0.5em;
+}
+@media screen and (max-width: 786px) {
+  .contact #achternaam {
+    padding-top: 0;
+  }
+}
+.contact button {
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 25px;
+  padding: 1em 2.5em;
+  margin-bottom: 2em;
+  float: right;
+}
+
+/* footer */
+section.footer {
+  text-align: center;
+  background-color: lightgrey;
+  margin-top: 8em;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.bottom-nav {
+  color: white;
+  text-decoration: underline;
+}
+
+@media only screen and (min-width: 900px) {
+  section.footer {
+    text-align: left;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "logo gegevens nav-bottom" "logo gegevens nav-bottom" "logo gegevens nav-bottom";
+  }
+  section.footer .logo {
+    grid-area: logo;
+    margin-left: 7em;
+  }
+  section.footer .gegevens {
+    grid-area: gegevens;
+  }
+  section.footer .bottom-nav {
+    grid-area: nav-bottom;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 768px) {
+  .bottom-nav {
+    padding-top: 2em;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
